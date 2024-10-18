@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>🎃 Atributos en HTML</title>
+  </head>
+  <body>
+    <h1>🎃Atributos en HTML</h1>
+    <p>Los Atributos en HTML so propiedades que se añaden a las etiquetas para proporcionar mas informacion o controlar su comportamiento</p>
+    <p>Los atributos siempre estan presentes dentro de las etiqueta de apertura y se compone de un nombre y un valor</p>
+
+<!--
+    
+Sintaxis:
+
+<etiqueta atributo="valor">...</etiqueta>
+
+-->
+
+<!--
+
+Atributo SRC
+
+Especifica la URL de un recurso como imagen, audio o video.
+
+Se usa en las etiquetas como: <img> <audio> <video> <iframe>
+
+  Se debe definir la ubicacion del archivo que se va a mostrar o cargar.
+
+-->
+
+<img src="./ariana-grande-shoes-66ebe3ebcd213.avif" alt=""/>
+
+<video src="./video.mp4"></video>
+
+<audio src="audio.mp3"></audio>
+
+<iframe src="./" frameborder="0"></iframe>
+
+
+<!--
+
+Alt=""
+
+Proporciona un texto alternativo para cuando una imagen no se puede mostrar.
+
+Esto es para volver accesibles las imagenes a los usuarios con discapacidades visuales.
+
+-->
+
+<img src="./unaimagen.png" alt="Este es un mensajeque describe la imagen no cargada"
+
+<!--
+
+  target=""
+
+  Especifica la relacion entre el documento actual y un recurso enlazado.
+
+-->
+
+<link rel="Stylesheet" href="./style.css">
+
+<a href="https://www.google.com" rel="nofollow"></a>
+
+<script rel="javascript" src="./script.js"> 
+let mensaje = "Hola mundo"; console.long(mensaje);
+</script>
+
+<!--
+
+5. style=""
+
+Funciona para definir estilos de CSS en linea directamente en la etiqueta...
+
+Aplique estos estilos a un elemento directamente. No es recomendable usarlo mucho, lo recomendable es usar hojas de estilo 
+
+-->
+
+<p style="color:white; font-size:56px">Texto de color blanquito! :D</p>
+
+<!--
+
+6. id=""
+
+Definir un identificador unico para una etiqueta.
+
+Funciona para cualquier etiqueta y se utilizab para enlazar un elemento con una hoja de estilos o con javascript. 
+
+El valor del id nosotros lo definimos
+
+-->
+
+<button id="miBotoncito">pikale aki</button>
+
+<script rel="javascript">
+  const boton = document.getElementById("miBotoncito");
+ boton.addEventListener("click",mensaje);
+
+ function mensaje(){
+  alert("ya casi terminamos")}
+
+</script>
+
+
+
+  </body>
+</html>
