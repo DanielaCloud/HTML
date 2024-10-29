@@ -24,29 +24,59 @@ required -> Norecibe valor es un atributo que le llamamos booleanoindica que el 
 
 
 
-    <form>
+    <form id="formulario">
       <label for="nombre">Nombre</label>
-      <input type="nombre" id="Juan Perez"> 
+      <input type="nombre" id="nombre" placeholder="Juan Perez" required/> 
       <br> 
 
-      <label for="email">Email</label>
-      <input type="nombre" id="email" placeholder="email@correo.com">
+      <label for="email"Correo Electronico</label>
+      <input type="nombre" id="email" placeholder="example@example.com" required/>
       <br>
 
       <label for="mensaje">Mensaje</label>
-      <textarea id="mensaje" placeholder="Deja un mensaje"</textarea>
+      <textarea id="mensaje" placeholder="Deja un mensaje"></textarea>
       <br>
 
       <button type="submit">Enviar</button>
 
+      </Form>
+
+
       <!--Contenedor del mensaje de confirmacion (ficticio) -->
 
-      <div id=""mensaje" style="display:none;">
-        <p>GRACIAS POR ENVIAR TUS DATOS, NOS COMUNICAREMOS CONTIGO PRONTO!</p>
+      <div id="mensajeConfirmar" style="display: none;">
+        <p>GRACIAS POR ENVIAR TUS DATOS, NOS COMUNICAREMOS CONTIGO PRONTO!🤍</p>
       </div>
 
       <script>
         /*codigo para que funcione el formulario...*/ 
+
+        //Obtener el formulario y el emensaje de confirmación 
+
+        const miFormulario = document.getElementById("formulario");
+
+        const mensajeConfirmacion = document.getElementById("mensajeConfirmar");
+
+        //Añadir un "escuchador" / "listener" para el "evento" / "event" del boton "submit"
+
+        miFormulario.addEventListener( "submit" , function(event){
+          //Código que se ve ajecutar cuando el usuario le pique en el boton
+          //alert("Haz dado click en el botón enviar!")
+
+          event.preventDefault(); // Evits que el formulario recargue la página
+
+          //Se oculte el elemento <form> 
+            miFormulario.style.display = "none"; 
+
+            //Mostramos el elemento <div> con el mensaje de confirmación 
+
+              mensajeConfirmacion.style.display = "block";
+          
+        }) 
+
+
+
+
       </script>
     
     </form>
